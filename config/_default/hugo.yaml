@@ -4,9 +4,9 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
+title: 'Elena Sanjuan'
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://elenasanjuan.github.io/'
 
 ############################
 ## LANGUAGE
@@ -49,6 +49,9 @@ markup:
   _merge: deep
   highlight:
     lineNos: false
+  goldmark:
+    renderer:
+      unsafe: true
 security:
   _merge: deep
 sitemap:
