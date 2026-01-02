@@ -1,0 +1,114 @@
+/* ===========================
+   Global site width 
+   =========================== */
+
+:root{
+  --site-max-width: 1120px;
+  --brand: #7f65a3;
+}
+
+/* Global width */
+.container,
+.hb-container,
+.page-container,
+.hb-page-body .container,
+main .container{
+  max-width: var(--site-max-width) !important;
+  width: 100% !important;
+}
+
+.prose, .hb-prose, .content .prose{ max-width: none !important; }
+
+/* Remove horizontal padding added by HugoBlox sections */
+.hb-page-body section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+/* Navbar background (force override Tailwind bg classes) */
+header,
+header .hb-navbar,
+header nav,
+header .navbar{
+  background-color: var(--brand) !important;
+  background-image: none !important;
+}
+
+/* Keep navbar aligned with content width */
+header .container,
+header .hb-navbar .container,
+header nav .container,
+header .navbar .container{
+  max-width: var(--site-max-width) !important;
+}
+
+/* White text + bigger font */
+header a,
+header .navbar-brand,
+header .nav-link,
+header .navbar a{
+  color: #fff !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+}
+
+/* Brand name same size as nav items */
+header .navbar-brand,
+header .hb-navbar-brand,
+header a.navbar-brand {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+}
+
+/* Hamburger icon / toggler */
+header button,
+header .navbar-toggler,
+header svg{
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+/* Hover/active */
+header a:hover{ opacity: 0.85; }
+header .active > a,
+header a[aria-current="page"]{
+  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+/* ===========================
+   Landing page: stop centering + make blocks align left
+   =========================== */
+
+/* HugoBlox landing blocks often center content */
+.hb-landing,
+.hb-landing section,
+.hb-landing .section-heading,
+.hb-landing .section-heading h1,
+.hb-landing .section-heading h2,
+.hb-landing .section-heading h3 {
+  text-align: left !important;
+}
+
+/* Ensure markdown content isn't forced to center */
+.hb-landing .prose,
+.hb-landing .hb-prose {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Give each landing section an inner width wrapper (like Daniela) */
+.hb-landing section > .container,
+.hb-landing section .hb-container,
+.hb-landing section .page-container,
+.hb-landing section .content {
+  max-width: var(--site-max-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}

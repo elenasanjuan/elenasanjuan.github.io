@@ -5,32 +5,35 @@ hugoblox:
     type: person
     tagline: ""
     description: I am a PhD candidate in Economics at CEMFI. My research focuses on applied microeconomics, with particular interests in household and labor economics.
+
   theme:
-    mode: system
+    mode: light
     pack: default
     colors:
       primary: "#7f65a3"
-      secondary: ""
-      neutral: ""
+
   typography:
     font: sans
     size: md
+
   layout:
     radius: md
     spacing: comfortable
     avatar_shape: circle
+    width: wide   
+
   header:
     enable: true
     style: navbar
     sticky: true
-    align: center
+    align: right   
     search: false
-    theme_toggle: true
+    theme_toggle: false
+
   footer:
     style: minimal
     language_switcher: false
-  copyright:
-    notice: © {year} {name}
+
   content:
     math:
       enable: false
@@ -38,5 +41,6 @@ hugoblox:
       enable: true
     reading_time:
       enable: true
+
   search:
-    enable: true
+    enable: false
